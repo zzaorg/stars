@@ -82,20 +82,21 @@
       </div>
       <div class="p-4">
         <div v-if="layout === 'grid'" class="grid grid-cols-1 gap-y-5 gap-x-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <article v-for="item in filteredData" :key="item._path" :href="absoluteURL(item._path)" >
+          <article v-for="item in filteredData" :key="item._path" >
             <div class="flex items-start border rounded-md">
-              <img
-                v-if="item.images && item.images.length"
-                :src="absoluteURL(item._path, item.images[0])"
-                :alt="item.name"
-                width="120"
-                height="176"
-                class="flex-none rounded-md bg-slate-100 object-cover w-[120px] h-[176px]"
-                loading="lazy"
-              />
+              <NuxtLink v-if="item.images && item.images.length" :to="absoluteURL(item._path) + '/'">
+                <img
+                  :src="absoluteURL(item._path, item.images[0])"
+                  :alt="item.name"
+                  width="120"
+                  height="176"
+                  class="flex-none rounded-md bg-slate-100 object-cover w-[120px] h-[176px]"
+                  loading="lazy"
+                />
+              </NuxtLink>
               <div class="min-w-0 relative flex flex-col flex-auto px-4 py-2  h-[176px]">
                 <h2 class="font-semibold text-slate-900 truncate">
-                  <NuxtLink :to="item._path">
+                  <NuxtLink :to="absoluteURL(item._path) + '/'">
                     {{ $lang === 'en' ? item.name : item.nameFa }}
                   </NuxtLink>
                 </h2>

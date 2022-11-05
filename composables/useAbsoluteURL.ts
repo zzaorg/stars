@@ -1,4 +1,4 @@
-import { joinURL } from 'ufo'
+import { joinURL } from 'ufo';
 
 export const useAbsoluteURL = () => {
   const $config = useRuntimeConfig()
@@ -6,6 +6,9 @@ export const useAbsoluteURL = () => {
   return {
     absoluteURL: (...urls: string[]) => {
       return joinURL($config.app.baseURL, ...urls)
+    },
+    withDomain: (...urls: string[]) => {
+      return joinURL($config.public.domain, ...urls)
     }
   }
 }

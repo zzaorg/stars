@@ -47,7 +47,7 @@ jobs:
       - name: Generate
         run: yarn generate
         env:
-          NUXT_PUBLIC_APP_URL: ""
+          NUXT_PUBLIC_DOMAIN: https://zzaorg.github.io
           NUXT_APP_BASE_URL: /${{ github.event.repository.name }}
 
       - name: Add .nojekyll file

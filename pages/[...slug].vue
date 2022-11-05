@@ -50,7 +50,7 @@ const dateFormatterEn = new Intl.DateTimeFormat('fa-IR', {
   month: 'long', day: 'numeric', year: 'numeric'
 })
 
-const { absoluteURL } = useAbsoluteURL()
+const { absoluteURL, withDomain } = useAbsoluteURL()
 const route = useRoute()
 const { $t, $lang, $date } = useNuxtApp()
 const path = '/' + (Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug]).filter(Boolean).join('/')
@@ -88,11 +88,11 @@ useHead({
     { name: 'description', content: description.value },
     { name: 'og:title', content: name.value },
     { name: 'og:description', content: description.value },
-    { name: 'og:image', content: image.value },
+    { name: 'og:image', content: withDomain(image.value) },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: name.value },
     { name: 'twitter:description', content: description.value },
-    { name: 'twitter:image', content: image.value }
+    { name: 'twitter:image', content: withDomain(image.value)  }
   ],
 })
 </script>
