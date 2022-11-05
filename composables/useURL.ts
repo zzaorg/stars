@@ -13,7 +13,7 @@ export const useURL = () => {
       return join($config.app.baseURL, ...urls)
     },
     withDomain: (...urls: string[]) => {
-      return join($config.public.domain, ...urls)
+      return joinURL($config.public.domain, ...urls.filter(Boolean))
     }
   }
 }

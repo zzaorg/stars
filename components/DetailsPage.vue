@@ -80,9 +80,8 @@ const name = computed(() => lang.value === 'en' ? data.value.name : data.value.n
 const title = `${name.value} - ${data.value.death?.city} - ${data.value.death?.province}`
 const image = computed(() => data.value?.images?.[0] ? withAppBase(data.value?._path, data.value?.images?.[0]) : '')
 const description = computed(() => [
-  name.value,
-  data.value?.death.age ? ` ${data.value?.death.age} ${$t('Years')}\n` : '',
   data.value?.death?.date,
+  data.value?.death.age ? ` ${data.value?.death.age} ${$t('Years')}\n` : '',
   data.value.death?.city,
   data.value.death?.province
 ].filter(Boolean).join(' - '))
