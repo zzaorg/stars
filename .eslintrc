@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "@nuxtjs/eslint-config-typescript"
+  ],
+  "rules": {
+    "no-console": 2,
+    "vue/no-v-model-argument": 0
+  }
+}
