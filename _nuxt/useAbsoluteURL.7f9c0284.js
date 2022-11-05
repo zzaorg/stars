@@ -1,1 +1,0 @@
-import{l as t,A as s}from"./entry.9c278a4c.js";const n=()=>{const o=t();return{absoluteURL:(...e)=>s(o.app.baseURL,...e),absoluteURLWithDomain:(...e)=>s(o.public.domain,o.app.baseURL,...e)}};export{n as u};
