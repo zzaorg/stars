@@ -8,4 +8,5 @@ death:
   age: 9
 images:
 - img.jpg
+- 1.jpg
 ---
