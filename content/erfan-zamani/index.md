@@ -11,6 +11,7 @@ images:
 - 1.jpg
 - 2.jpg
 - death.jpg
+- 10.jpeg
 ---
 
 https://twitter.com/pkhwshhal/status/1588282878520983552?s=20&t=zBDfmVc7Km1uwurmE3KeNg

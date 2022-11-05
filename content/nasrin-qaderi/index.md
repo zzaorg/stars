@@ -14,4 +14,5 @@ refs:
 - https://www.mashreghnews.ir/news/1433125
 images:
 - img.png
+- 1.jpeg
 ---
