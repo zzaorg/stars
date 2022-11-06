@@ -1,11 +1,9 @@
 ---
-name: Samer Hashemzehi
-nameFa: سامر هاشمزهی
+name: Jaber Hashemzehi
+nameFa: جابر شیروزهی
 death:
   date: 2022-09-30
   city: Zahedan
   province: Sistan and Baluchestan
-  age: 16
-images:
-- img.jpg
+  age: 12
 ---

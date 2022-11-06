@@ -1,6 +1,6 @@
 ---
 name: Mohammad Iqbal Shahnawaazi
-nameFa: محمد اقبال شهنوازی
+nameFa: محمد اقبال شهنوازی (نائب زهی)
 death:
   date: 2022-09-30
   city: Zahedan
@@ -9,4 +9,16 @@ death:
 images:
 - img.jpg
 - his-money.jpeg
+- 1.jpg
+- 2.jpg
+- 3.jpg
 ---
+
+
+محمد اقبال نائب زهی ۱۶ ساله، فرزند نیازمحمد/ فاقد شناسنامه[*][1]
+
+
+
+
+
+- [1]: https://www.tribunezamaneh.com/archives/324583
