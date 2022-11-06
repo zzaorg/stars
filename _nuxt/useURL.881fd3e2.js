@@ -1,0 +1,1 @@
+import{l as a,A as t,z as r}from"./entry.b5a98894.js";const l=()=>{const e=a(),o=(...n)=>{const[i,...s]=n.filter(Boolean);return r(t(i,...s))};return{join:o,withAppBase:(...n)=>o(e.app.baseURL,...n),withDomain:(...n)=>t(e.public.domain,...n.filter(Boolean))}};export{l as u};
