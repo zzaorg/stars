@@ -1,5 +1,5 @@
 ---
-name: Pooya Sheyda
+name: Pooya Sheida
 nameFa: پویا شیدا
 death:
   date: 2022-09-21
