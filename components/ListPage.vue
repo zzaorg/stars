@@ -139,6 +139,8 @@
 <script setup lang="ts">
 const { withAppBase, join } = useURL()
 const { $t, $date, lang } = useI18n()
+const route = useRoute()
+const router = useRouter()
 const language = computed(() => lang.value === 'fa' ? '' : lang.value)
 const { data } = await useAsyncData<any[]>(() => queryContent().without(['body', 'excerpt', '_file']).sort({'death.date': -1 }).find(), {
   transform: data => data
@@ -161,11 +163,42 @@ useHead({
 })
 
 const layout = ref('grid')
-const filter = ref('')
-const city = ref('')
-const province = ref('')
-const date = ref('')
-const ageFilter = ref('')
+const filter = computed({
+  get: () => route.query.q as string || '',
+  set: (value) => router.replace({
+    path: route.path,
+    query: { ...route.query, q: value || undefined }
+  })
+})
+const city = computed({
+  get: () => route.query.city as string || '',
+  set: (value) => router.replace({
+    path: route.path,
+    query: { ...route.query, city: value || undefined }
+  })
+})
+const province = computed({
+  get: () => route.query.province as string || '',
+  set: (value) => router.replace({
+    path: route.path,
+    query: { ...route.query, province: value || undefined }
+  })
+})
+const date = computed({
+  get: () => route.query.date as string || '',
+  set: (value) => router.replace({
+    path: route.path,
+    query: { ...route.query, date: value || undefined }
+  })
+})
+const ageFilter = computed({
+  get: () => route.query.age,
+  set: (value) => router.replace({
+    path: route.path,
+    query: { ...route.query, age: value || undefined }
+  })
+})
+
 
 const filteredData = computed(() => {
   let result = data.value || []
@@ -183,7 +216,15 @@ const filteredData = computed(() => {
   }
 
   if (ageFilter.value) {
-    result = result.filter(item => item.death?.age === ageFilter.value)
+    if (String(ageFilter.value).startsWith(">")) {
+      const age = +ageFilter.value.slice(1)
+      result = result.filter(item => item.death?.age > age)
+    } else if (String(ageFilter.value).startsWith("<")) {
+      const age = +ageFilter.value.slice(1)
+      result = result.filter(item => item.death?.age < age)
+    } else {
+      result = result.filter(item => item.death?.age === ageFilter.value)
+    }
   }
 
   if (!filter.value) {
