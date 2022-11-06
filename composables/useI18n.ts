@@ -103,7 +103,8 @@ export const useI18n = () => {
     Hamedan: 'همدان',
     Chaldoran: 'چالدران',
     Khash: 'خاش',
-  
+    Mahshahr: 'ماهشهر',
+
   
     // Provinces
     'Sistan and Baluchestan': 'سیستان و بلوچستان',
