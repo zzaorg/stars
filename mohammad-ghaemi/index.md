@@ -1,6 +1,6 @@
 ---
 name: Mohammad Ghaemi
-nameFa: 
+nameFa: محمد قائمی
 death:
   date: 2022-11-06
   city: Dezful
