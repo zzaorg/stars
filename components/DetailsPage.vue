@@ -106,6 +106,11 @@ useHead({
   border: 1px solid #ccc;
   border-radius: 8px;;
 }
+.content video {
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;;
+}
 blockquote {
   background: #f9f9f9;
   border-right: 10px solid #ccc;

@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   },
   content: {
     ignores: [
-      '.*\\.(jpg|jpeg|png)$',
+      '.*\\.(jpg|jpeg|png|mp4)$',
     ]
   },
   nitro: {
