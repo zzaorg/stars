@@ -13,12 +13,12 @@
         <div class="text-sm text-gray-500">
           <div class="my-1">{{ $t('Birth') }}</div>
           <div>
-            <span class="text-black">{{ data.birth?.date }}</span> - <span class="text-black">{{ data.birth?.city }}</span> - <span class="text-black">{{ data.birth?.province }}</span>
+            <span class="text-black">{{ $date(data.birth?.date) }}</span> - <span class="text-black">{{ $t(data.birth?.city) }}</span> - <span class="text-black">{{ $t(data.birth?.province) }}</span>
           </div>
         </div>
         <div class="text-sm text-gray-500">
           <div class="my-1">{{ $t('Death') }}</div>
-          <span class="text-black">{{ data.death?.date }}</span> - <span class="text-black">{{ data.death?.city }}</span> - <span class="text-black">{{ data.death?.province }}</span>
+          <span class="text-black">{{ $date(data.death?.date) }}</span> - <span class="text-black">{{ $t(data.death?.city) }}</span> - <span class="text-black">{{ $t(data.death?.province) }}</span>
         </div>
         <div class="text-sm text-gray-500">
           <div class="my-1">{{ $t('Age') }}</div>
@@ -59,31 +59,16 @@ const language = computed(() => lang.value === 'fa' ? '' : lang.value)
 const route = useRoute()
 const path = '/' + (Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug]).filter(Boolean).join('/')
 const { data } = await useAsyncData(path, () => queryContent(path).without(['excerpt', '_file']).sort({'death.date': -1 }).findOne(), {
-  transform: (data: any) => ({
-    ...data,
-    death: {
-      ...data.death,
-      date: $date(data.death?.date),
-      city: $t(data.death?.city),
-      province: $t(data.death?.province)
-    },
-    birth: {
-      ...data.birth,
-      date: $date(data.birth?.date),
-      city: $t(data.birth?.city),
-      province: $t(data.birth?.province)
-    }
-  })
 })
 
-const name = computed(() => lang.value === 'en' ? data.value.name : data.value.nameFa)
-const title = `${name.value} - ${data.value.death?.city} - ${data.value.death?.province}`
+const name = computed(() => lang.value === 'en' ? data.value?.name : data.value?.nameFa)
+const title = `${name.value} - ${data.value?.death?.city} - ${data.value?.death?.province}`
 const image = computed(() => data.value?.images?.[0] ? withAppBase(data.value?._path, data.value?.images?.[0]) : '')
 const description = computed(() => [
   data.value?.death?.date,
-  data.value?.death.age ? ` ${data.value?.death.age} ${$t('Years')}\n` : '',
-  data.value.death?.city,
-  data.value.death?.province
+  data.value?.death?.age ? ` ${data.value?.death.age} ${$t('Years')}\n` : '',
+  data.value?.death?.city,
+  data.value?.death?.province
 ].filter(Boolean).join(' - '))
 useHead({
   title,

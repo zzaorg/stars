@@ -27,7 +27,7 @@
 import { withBase, withoutBase } from 'ufo'
 
 const route = useRoute()
-const isRTL = computed(() => !route.fullPath.match(/\/en(\/|$)/))
+const isRTL = computed(() => !route.fullPath.match(/\/en(\/|$|\?|\#)/))
 </script>
 
 <style>

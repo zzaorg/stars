@@ -4,7 +4,7 @@ nameFa: مهدی محرم‌زاده
 death:
   date: 
   city: Tehran
-  provice: Tehran
+  province: Tehran
 images:
 - img.jpg
 - 1.jpg

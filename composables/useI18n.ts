@@ -1,6 +1,6 @@
 export const useI18n = () => {
     const route = useRoute()
-    const isRTL = computed(() => !route.fullPath.match(/\/en(\/|$)/))
+    const isRTL = computed(() => !route.fullPath.match(/\/en(\/|$|\?|\#)/))
     const lang = ref<'en' | 'fa'>(isRTL.value ? 'fa' : 'en')
     const direction = computed(() => isRTL.value ? 'rtl' : 'ltr')
     const dateFormatterFa = new Intl.DateTimeFormat('fa-IR', { month: 'long', day: 'numeric', year: 'numeric' })
@@ -88,7 +88,7 @@ export const useI18n = () => {
     Langarud: 'لنگرود',
     Quchan: 'قوچان',
     Oshnavieh: 'اشنویه',
-    Balo: 'بالو',
+    Balu: 'بالو',
     Shahriar: 'شهریار',
     Amol: 'آمل',
     Divandarreh: 'دیواندره',
@@ -104,6 +104,7 @@ export const useI18n = () => {
     Chaldoran: 'چالدران',
     Khash: 'خاش',
     Mahshahr: 'ماهشهر',
+    Semnan: 'سمنان',
 
   
     // Provinces
