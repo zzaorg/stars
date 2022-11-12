@@ -34,6 +34,7 @@ export const useI18n = () => {
     'Back To List': 'بازگشت به لیست',
     'Search here': 'اینجا سرچ کنید',
     person: 'نفر',
+    Reference: 'منبع',
   
     // Cities
     Zahedan: 'زاهدان',
@@ -105,6 +106,8 @@ export const useI18n = () => {
     Khash: 'خاش',
     Mahshahr: 'ماهشهر',
     Semnan: 'سمنان',
+    'Bandar-e Deylam': 'بندر دیلم',
+    'Gonbad Kavous': 'گنبد کاووس',
 
   
     // Provinces
@@ -123,6 +126,8 @@ export const useI18n = () => {
     'Razavi Khorasan': 'خراسان رضوی',
     'North Khorasan': 'خراسان شمالی',
     'South Khorasan': 'خراسان جنوبی',
+    Bushehr: 'بوشهر',
+    Lorestan: 'لرستان'
    },
    en: {}
   }

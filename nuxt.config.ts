@@ -23,7 +23,8 @@ export default defineNuxtConfig({
   nitro: {
     publicAssets: [
       {
-        dir: __dirname + '/content'
+        dir: __dirname + '/content',
+        
       }
     ]
   }

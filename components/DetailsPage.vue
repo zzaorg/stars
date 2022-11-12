@@ -13,20 +13,20 @@
         <div class="text-sm text-gray-500">
           <div class="my-1">{{ $t('Birth') }}</div>
           <div>
-            <span class="text-black">{{ $date(data.birth?.date) }}</span> - <span class="text-black">{{ $t(data.birth?.city) }}</span> - <span class="text-black">{{ $t(data.birth?.province) }}</span>
+            <span class="text-black">{{ $date(data?.birth?.date) }}</span> - <span class="text-black">{{ $t(data?.birth?.city) }}</span> - <span class="text-black">{{ $t(data?.birth?.province) }}</span>
           </div>
         </div>
         <div class="text-sm text-gray-500">
           <div class="my-1">{{ $t('Death') }}</div>
-          <span class="text-black">{{ $date(data.death?.date) }}</span> - <span class="text-black">{{ $t(data.death?.city) }}</span> - <span class="text-black">{{ $t(data.death?.province) }}</span>
+          <span class="text-black">{{ $date(data?.death?.date) }}</span> - <span class="text-black">{{ $t(data?.death?.city) }}</span> - <span class="text-black">{{ $t(data?.death?.province) }}</span>
         </div>
         <div class="text-sm text-gray-500">
           <div class="my-1">{{ $t('Age') }}</div>
-          <span class="text-black">{{ $t(data.death?.age) || '-' }}</span>
+          <span class="text-black">{{ $t(data?.death?.age) || '-' }}</span>
         </div>
       </div>
       <div class="bottom-0" dir="ltr">
-        <a v-if="data.wikipedia" rel="noopener noreferrer" target="_blank" title="wikipedia" :href="data.wikipedia" class="inline-block border border-gray-300 rounded-md shadow-sm py-1 px-1 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <a v-if="data?.wikipedia" rel="noopener noreferrer" target="_blank" title="wikipedia" :href="data?.wikipedia" class="inline-block border border-gray-300 rounded-md shadow-sm py-1 px-1 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
           <IconWikipedia class="w-4 h-4" />
         </a>
       </div>
@@ -39,10 +39,10 @@
         </ContentRenderer>
       </div>
 
-      <template v-if="data.images?.length">
+      <template v-if="data?.images?.length">
         <h4 class="my-2">{{ $t('Gallery')}} </h4>
         <div class="w-full grid grid-cols-4 gap-2">
-          <div v-for="img in data.images" :key="img" class="relative w-full pb-[100%]">
+          <div v-for="img in data?.images" :key="img" class="relative w-full pb-[100%]">
             <img :src="withAppBase(data._path, img)" class="w-full h-full object-cover absolute">
           </div>
         </div>
@@ -58,7 +58,7 @@ const language = computed(() => lang.value === 'fa' ? '' : lang.value)
 
 const route = useRoute()
 const path = '/' + (Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug]).filter(Boolean).join('/')
-const { data } = await useAsyncData(path, () => queryContent(path).without(['excerpt', '_file']).sort({'death.date': -1 }).findOne(), {
+const { data } = await useAsyncData(`deatails-${path}`, () => queryContent(path).without(['excerpt', '_file']).sort({'death.date': -1 }).findOne(), {
 })
 
 const name = computed(() => lang.value === 'en' ? data.value?.name : data.value?.nameFa)
@@ -96,22 +96,10 @@ useHead({
   border: 1px solid #ccc;
   border-radius: 8px;;
 }
-blockquote {
-  background: #f9f9f9;
-  border-right: 10px solid #ccc;
-  margin: 1em 0px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+.content ul {
+  list-style-type: disc;
 }
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-left: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
+.twitter-tweet-rendered {
+  margin: 0 auto;
 }
 </style>
