@@ -108,6 +108,7 @@ export const useI18n = () => {
     Semnan: 'سمنان',
     'Bandar-e Deylam': 'بندر دیلم',
     'Gonbad Kavous': 'گنبد کاووس',
+    Iranshahr: 'ایران شهر',
 
   
     // Provinces
