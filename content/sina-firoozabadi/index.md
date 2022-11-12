@@ -4,7 +4,7 @@ nameFa: سینا فیروزآبادی
 death:
   date: 2022-11-07
   city: Shiraz
-  provice: Fars
+  province: Fars
 images:
 - img.jpg
 - agahi-tarhim.jpg

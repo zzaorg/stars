@@ -127,7 +127,8 @@ export const useI18n = () => {
     'North Khorasan': 'خراسان شمالی',
     'South Khorasan': 'خراسان جنوبی',
     Bushehr: 'بوشهر',
-    Lorestan: 'لرستان'
+    Lorestan: 'لرستان',
+    Fars: 'فارس',
    },
    en: {}
   }
