@@ -1,6 +1,6 @@
 ---
-name: Sam Beiranvand
-nameFa: سام بیرانوند
+name: Sam (Sepehr) Beiranvand
+nameFa: سام (سپهر) بیرانوند
 death:
   date: 2022-11-09
   city: Khorramabad

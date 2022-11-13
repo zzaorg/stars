@@ -109,7 +109,7 @@ export const useI18n = () => {
     'Bandar-e Deylam': 'بندر دیلم',
     'Gonbad Kavous': 'گنبد کاووس',
     Iranshahr: 'ایران شهر',
-
+    Miandoab: 'میاندوآب',
   
     // Provinces
     'Sistan and Baluchestan': 'سیستان و بلوچستان',
