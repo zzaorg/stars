@@ -2,7 +2,7 @@
 name: Ardalan Ghasemi
 nameFa: اردلان قاسمی
 death:
-  date: 20220-11-10
+  date: 2022-11-10
   city: Kermanshah
   province: Kermanshah
   age: 44
