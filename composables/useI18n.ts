@@ -111,6 +111,7 @@ export const useI18n = () => {
     Iranshahr: 'ایران شهر',
     Miandoab: 'میاندوآب',
     Izeh: 'ایزه',
+    Kamyaran: 'کامیاران',
   
     // Provinces
     'Sistan and Baluchestan': 'سیستان و بلوچستان',
