@@ -142,7 +142,7 @@ const { $t, $date, lang } = useI18n()
 const route = useRoute()
 const router = useRouter()
 const language = computed(() => lang.value === 'fa' ? '' : lang.value)
-const { data } = await useAsyncData<any[]>(() => queryContent().without(['body', 'excerpt', '_file']).sort({'death.date': -1 }).find(), {
+const { data } = await useAsyncData<any[]>(() => queryContent().without(['body', 'excerpt', '_file']).sort({ 'death.date': -1 }).find(), {
   transform: data => data
     .map(item => ({
       ...item, text: `${item.name} ${item.death?.city || ''} ${$t(item.death?.city || '')} ${item.death?.province || ''} ${$t(item.death?.province || '')} ${$date(item.death?.date)} ${item.nameFa}`.toLocaleLowerCase()

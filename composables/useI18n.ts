@@ -112,6 +112,9 @@ export const useI18n = () => {
     Miandoab: 'میاندوآب',
     Izeh: 'ایزه',
     Kamyaran: 'کامیاران',
+    Semirom: 'سمیرم',
+    Parsian: 'پارسیان',
+    Bojnurd: 'بجنورد',
   
     // Provinces
     'Sistan and Baluchestan': 'سیستان و بلوچستان',
