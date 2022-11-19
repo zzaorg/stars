@@ -4,7 +4,7 @@ nameFa: فایق مام‌قادری
 death:
   date: 2022-11-09
   city: Mahabad
-  province: Kurdistan
+  province: West Azerbaijan
   age: 37
 images:
 - img.jpg
