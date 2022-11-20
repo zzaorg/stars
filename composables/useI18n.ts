@@ -118,6 +118,7 @@ export const useI18n = () => {
     Dehgolan: 'دهگلان',
     Javanrud: 'جوانرود',
     'Someh Sara': 'صومعه‌سرا',
+    'Salman Shahr': 'سلمان شهر',
 
     // Provinces
     'Sistan and Baluchestan': 'سیستان و بلوچستان',

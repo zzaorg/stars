@@ -6,6 +6,7 @@ death:
   city: Saqez
   province: Kurdistan
   age: 17
+wikipedia: https://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%DB%8C%D8%A7%D9%84_%D9%BE%D8%A7%D8%A8%D9%86%D8%AF%DB%8C
 news:
   iranwire: https://iranwire.com/fa/special-features/109991-%D8%AF%D8%A7%D9%86%DB%8C%D8%A7%D9%84-%D9%BE%D8%A7%D8%A8%D9%86%D8%AF%DB%8C-%DA%A9%D8%B4%D8%AA%D9%87-%D8%A7%D8%B9%D8%AA%D8%B1%D8%A7%D8%B6%D8%A7%D8%AA-%D8%B3%D9%82%D8%B2-%DA%86%DA%AF%D9%88%D9%86%D9%87-%D8%A8%D9%87-%D8%AE%D8%A7%DA%A9-%D8%B3%D9%BE%D8%B1%D8%AF%D9%87-%D8%B4%D8%AF/
 images:

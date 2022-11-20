@@ -6,6 +6,7 @@ death:
   city: Tehran
   province: Tehran
   age: 20
+wikipedia: https://fa.wikipedia.org/wiki/%D8%AD%D9%85%DB%8C%D8%AF%D8%B1%D8%B6%D8%A7_%D8%B1%D9%88%D8%AD%DB%8C
 images:
 - img.jpg
 - 1.jpg
