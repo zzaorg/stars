@@ -5,7 +5,10 @@ death:
   date: 2022-11-03
   city: Karaj
   province: Alborz
-  age: 17
+  age: 18
+birth:
+  date: 2004-04-15
+wikipedia: https://fa.wikipedia.org/wiki/%DA%A9%D8%B4%D8%AA%D9%87%E2%80%8C%D8%B4%D8%AF%D9%86_%D9%86%DB%8C%D9%85%D8%A7_%D9%86%D9%88%D8%B1%DB%8C
 images:
 - img.jpg
 - 1.jpg

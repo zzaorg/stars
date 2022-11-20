@@ -6,6 +6,7 @@ death:
   city: Izeh
   province: Khuzestan
   age: 10
+wikipedia: https://fa.wikipedia.org/wiki/%DA%A9%DB%8C%D8%A7%D9%86_%D9%BE%DB%8C%D8%B1%D9%81%D9%84%DA%A9
 images:
 - img.jpg
 - 1.jpg

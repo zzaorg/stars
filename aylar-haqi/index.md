@@ -7,6 +7,7 @@ death:
   province: East Azerbaijan
 social:
   twitter: https://twitter.com/ay_____l_ar
+wikipedia: https://fa.wikipedia.org/wiki/%D8%A2%DB%8C%D9%84%D8%A7%D8%B1_%D8%AD%D9%82%DB%8C
 images:
 - img.jpg
 - 2.jpg
