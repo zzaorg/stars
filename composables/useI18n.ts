@@ -115,7 +115,9 @@ export const useI18n = () => {
     Semirom: 'سمیرم',
     Parsian: 'پارسیان',
     Bojnurd: 'بجنورد',
-  
+    Dehgolan: 'دهگلان',
+    Javanrud: 'جوانرود',
+
     // Provinces
     'Sistan and Baluchestan': 'سیستان و بلوچستان',
     'West Azerbaijan': 'آذربایجان غربی',
