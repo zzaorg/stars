@@ -11,4 +11,5 @@ birth:
 images:
 - img.jpg
 - grave.jpeg
+- javaz-dafn.jpg
 ---
