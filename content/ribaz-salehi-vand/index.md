@@ -4,7 +4,7 @@ nameFa: ریباز صالحی وند
 death:
   date: 2022-11-22
   city: Mahabad
-  provinde: Kurdistan
+  province: Kurdistan
 images:
 - img.jpg
 - 1.jpg
