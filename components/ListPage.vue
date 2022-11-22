@@ -146,7 +146,7 @@ const { data } = await useAsyncData<any[]>(() => queryContent().without(['body',
   transform: data => data
     .map(item => ({
       ...item, text: `${item.name} ${item.death?.city || ''} ${$t(item.death?.city || '')} ${item.death?.province || ''} ${$t(item.death?.province || '')} ${$date(item.death?.date)} ${item.nameFa}`.toLocaleLowerCase()
-    }))
+    })).sort((a, b) => !b.death?.date ? -1 : 1)
 })
 
 const description = computed(() => `عزیزانی که در روزهای گذشته از میان ما رفته‌اند.`)
